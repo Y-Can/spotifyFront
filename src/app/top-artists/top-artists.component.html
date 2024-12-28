@@ -1,0 +1,11 @@
+<div class="recent-tracks-container">
+<h2 i18n="@@top-artists.component-9">Recent Tracks</h2>
+<ul>
+<li (mouseleave)="stopAudio()" *ngfor="let artist of topArtists" class="track-card">
+<img [src]="artist?.imageUrl" alt="Album Cover" class="card-background"/>
+<div class="track-info">
+<p class="track-title" i18n="@@top-artists.component-10">{{ artist.name }}</p>
+</div>
+</li>
+</ul>
+</div>

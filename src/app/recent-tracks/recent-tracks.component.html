@@ -1,0 +1,13 @@
+<div class="recent-tracks-container">
+<h2 i18n="@@recent-tracks.component-6">Recent Tracks</h2>
+<ul>
+<li (mouseenter)="playAudio(track.previewUrl)" (mouseleave)="stopAudio()" *ngfor="let track of recentTracks" class="track-card">
+<img [src]="track.imageUrl" alt="Album Cover" class="card-background"/>
+<div class="track-info">
+<p class="track-title" i18n="@@recent-tracks.component-7">{{ track.title }} by {{ track.artists.join(', ') }}</p>
+<p i18n="@@recent-tracks.component-8">Album: {{ track.album }}</p>
+<p i18n="@@recent-tracks.component-9">Played at: {{ track.playedAt }}</p>
+</div>
+</li>
+</ul>
+</div>

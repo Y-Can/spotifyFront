@@ -1,0 +1,70 @@
+
+.recent-tracks-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.track-card {
+    position: relative;
+    margin: 10px;
+    padding: 0; /* Remove padding to allow the image to cover the entire card */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden; /* Ensure the image doesn't extend beyond the card */
+    height: 350px; /* Define a fixed height for consistent card size */
+    cursor: pointer;  // Encourages user interaction
+    // Ensure no 'pointer-events: none;' on this or parent elements
+    width: 280px;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.2s;
+  }
+  .track-card:hover {
+    transform: scale(1.1); /* Increase size by 5% */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+  }
+  .card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire area of the card */
+    height: 100%; /* Match the height of the card */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    z-index: 1; /* Behind the information text */
+  }
+  
+  .track-info {
+    position: relative;
+    z-index: 10; /* Above the background image */
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 150%;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%; /* Ensure it fits within the card */
+    margin: auto; /* Center within the card */
+    margin-bottom: 0;
+  }
+  
+  .track-title {
+    font-family: 'Righteous', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list item bullets */
+    padding: 0; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
